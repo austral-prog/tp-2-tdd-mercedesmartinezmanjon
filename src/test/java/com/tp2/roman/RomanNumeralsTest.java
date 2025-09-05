@@ -4,13 +4,85 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RomanNumeralsTest {
-
-    // TODO: Replace these lines with your tests
+    RomanNumerals nro = new RomanNumerals();
     @Test
-    void exampleTest(){
-        assertEquals(4, 2 + 1);
+    void testConvierteUno() {
+        assertEquals("I", nro.convert(1));
+    }
+    @Test
+    void testConvierteCinco() {
+        assertEquals("V", nro.convert(5));
     }
 
+    @Test
+    void testConvierteDiez() {
+        assertEquals("X", nro.convert(10));
+    }
+
+    @Test
+    void testConvierteCuatro() {
+        assertEquals("IV", nro.convert(4));
+    }
+
+    @Test
+    void testConvierteNueve() {
+        assertEquals("IX", nro.convert(9));
+    }
+
+    @Test
+    void testConvierteCuarenta() {
+        assertEquals("XL", nro.convert(40));
+    }
+
+    @Test
+    void testConvierteCincuenta(){
+        assertEquals("L", nro.convert(50));
+    }
+
+    @Test
+    void testConvierteNoventa(){
+        assertEquals("XC", nro.convert(90));
+    }
+
+    @Test
+    void testConvierteCien(){
+        assertEquals("C", nro.convert(100));
+    }
+
+    @Test
+    void testConvierteCuatrocientos(){
+        assertEquals("CD", nro.convert(400));
+    }
+
+    @Test
+    void testConvierteQuinientos(){
+        assertEquals("D", nro.convert(500));
+    }
+
+    @Test
+    void testConvierteMil(){
+        assertEquals("M", nro.convert(1000));
+    }
+
+    @Test
+    void testComplejo1(){
+        assertEquals("MCMXCIV", nro.convert(1994));
+    }
+
+    @Test
+    void testComplejo2(){
+        assertEquals("MMXXIII", nro.convert(2023));
+    }
+
+    @Test
+    void testComplejo3(){
+        assertEquals("MMMDCCCLXXXVIII", nro.convert(3888));
+    }
+
+    @Test
+    void testComplejo4(){
+        assertEquals("MMCDXXI", nro.convert(2421));
+    }
 //    Missing tests:
 //
 //- Convert 1 to "I"
